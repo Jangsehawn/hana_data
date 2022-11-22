@@ -75,7 +75,7 @@ for idx, keywords in df.iterrows():
     key_embeddings = torch.zeros(150,)
     for keyword in keywords['keybert_keywords'].split(','):
         key_embedding = one_hot_encoding(keyword, words_to_index)
-        print(key_embedding.size())
+        #print(key_embedding.size())
         key_embeddings += key_embedding
     keyword_embeddings.append(key_embeddings)
         
